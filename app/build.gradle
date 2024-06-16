@@ -1,0 +1,132 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
+//    font-family: 'Protest Strike', sans-serif;
+}
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withInputStream { stream ->
+        localProperties.load(stream)
+    }
+}
+
+
+android {
+    namespace 'com.example.spotsync'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.spotsync"
+        minSdk 25
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        manifestPlaceholders = [GOOGLE_MAPS_API_KEY: localProperties['GOOGLE_MAPS_API_KEY']]
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+        viewBinding true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.2'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+//    fonts 'com.google.android:fonts-cyrillic:1.0.0'
+    implementation 'com.google.android.gms:play-services-measurement-api:20.0.1'
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
+    implementation 'androidx.activity:activity-compose:1.8.2'
+    implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    implementation 'androidx.compose.material:material:1.6.0'
+//    implementation 'androidx.compose.material3:material3:1.2. 0-rc01'
+    implementation 'androidx.compose.material3:material3:1.1.0'
+    implementation 'androidx.navigation:navigation-runtime-ktx:2.7.6'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.annotation:annotation:1.7.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
+    implementation 'com.google.firebase:firebase-auth:21.0.3'
+//    implementation 'com.google.android.gms:play-services-auth:21.2.0'
+    implementation 'com.google.android.gms:play-services-auth:20.3.0'
+    implementation 'com.google.firebase:firebase-database:21.0.0'
+    implementation 'androidx.core:core-ktx:+'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:1.6.0"
+    implementation "androidx.compose.foundation:foundation:1.6.0"
+    implementation "androidx.compose.runtime:runtime-livedata:1.6.0"
+
+    implementation "androidx.compose.ui:ui:1.6.0"
+
+    implementation "androidx.compose.ui:ui-tooling-preview:1.6.0"
+    implementation "androidx.compose.ui:ui-tooling:1.1.0"
+    implementation "androidx.compose.ui:ui-test-manifest:1.6.0"
+
+    // Java language implementation
+
+    implementation("androidx.navigation:navigation-fragment:2.7.6")
+    implementation("androidx.navigation:navigation-ui:2.7.6")
+    implementation 'androidx.hilt:hilt-navigation-fragment:1.0.0'
+    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
+    // Kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
+
+    // Feature module Support
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.7.6")
+
+    // Testing Navigation
+    androidTestImplementation("androidx.navigation:navigation-testing:2.7.6")
+
+    // Jetpack Compose Integration
+    implementation("androidx.navigation:navigation-compose:2.7.6")
+//    implementation("androidx.security:security-crypto-ktx:1.1.0-alpha06")
+
+    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
+    implementation 'com.google.dagger:hilt-android:2.40.5'
+    kapt 'com.google.dagger:hilt-android-compiler:2.40.5'
+    kapt 'androidx.hilt:hilt-compiler:1.0.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+
+
+
+}
+

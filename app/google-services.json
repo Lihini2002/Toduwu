@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "948457369128",
+    "project_id": "toduwu",
+    "storage_bucket": "toduwu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948457369128:android:8f520ba77da86b09ea8f1d",
+        "android_client_info": {
+          "package_name": "com.example.spotsync"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxlzFEOOeevxfCbEhhk28-l6A5zC5cQvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
