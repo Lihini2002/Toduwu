@@ -1,0 +1,76 @@
+[
+  {
+    "title": "Buy groceries",
+    "subtitle": "Milk, eggs, bread",
+    "priority": 2,
+    "isDone": false,
+    "location": "Grocery store",
+    "date": "2023-02-14",
+    "description": "Purchase essential food items for the week."
+  },
+  {
+    "title": "Clean bathroom",
+    "subtitle": "",
+    "priority": 1,
+    "isDone": false,
+    "location": "",
+    "date": "2023-02-14",
+    "description": "Thoroughly clean the bathroom, including the sink, toilet, and shower."
+  },
+  {
+    "title": "Call mom",
+    "subtitle": "",
+    "priority": 3,
+    "isDone": true,
+    "location": "Home",
+    "date": "2023-02-13",
+    "description": "Have a phone conversation with mom to catch up and check on her."
+  },
+  {
+    "title": "Meeting with team",
+    "subtitle": "",
+    "priority": 1,
+    "isDone": false,
+    "location": "Conference room",
+    "date": "2023-02-15",
+    "description": "Discuss project updates and future plans with the team."
+  },
+  {
+    "title": "Submit report",
+    "subtitle": "",
+    "priority": 2,
+    "isDone": false,
+    "location": "Office",
+    "date": "2023-02-15",
+    "description": "Complete and submit the report for the current project."
+  },
+  {
+    "title": "Follow up with client",
+    "subtitle": "",
+    "priority": 3,
+    "isDone": true,
+    "location": "Phone",
+    "date": "2023-02-14",
+    "description": "Check in with the client regarding the status of their project."
+  },
+  {
+    "title": "Submit report",
+    "subtitle": "",
+    "priority": 2,
+    "isDone": false,
+    "location": "Office",
+    "date": "2023-02-15",
+    "description": "Complete and submit the report for the current project."
+  },
+  {
+    "title": "Follow up with client",
+    "subtitle": "",
+    "priority": 3,
+    "isDone": true,
+    "location": "Phone",
+    "date": "2023-02-14",
+    "description": "Check in with the client regarding the status of their project."
+  }
+]
+
+
